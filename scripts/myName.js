@@ -4,13 +4,27 @@
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/71';
+
+//variabelen samenvoegen
+const myURL = baseURL + endpointMe;
 
 
 
 
+//gebruik de URL, maak een variabel en die variabel roept een functie of iets aan
+getData(myURL).then( data196 => {
+	//console.log(data196.data);
+	//maak een variabel aan
+	let deH1 = document.querySelector("h1");
 
+//maak een variabel aan en grijp de naam uit de data lijst
+	let myName = data196.data.name;
 
+	//console.log(myName);
+	//vervang de data op de website met de goede data
+	deH1.textContent = myName;
+});
 
 
 
