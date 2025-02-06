@@ -4,15 +4,15 @@
 
 
 //gebruik de URL, maak een variabel en die variabel roept een functie of iets aan
-// getData(myURL).then( data196 => {
-// 	//console.log(data196.data.name);
-// 	//
-// 	let deH1 = document.querySelector("h1");
+getData(myURL).then( data196 => {
+	console.log(data196.data.birthdate);
+	//
+	let deH1 = document.querySelector("h2");
 
-// 	let myBirthdate = data196.data.birthdate;
-// 	//console.log(myName);
-// 	deH1.textContent = myBirthdate;
-// });
+	let myBirthdate = data196.data.birthdate;
+	//console.log(myName);
+	deH1.textContent = myBirthdate;
+});
 
 
 

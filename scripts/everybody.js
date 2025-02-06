@@ -4,7 +4,7 @@ const endpointSquad = 'items/person/?filter={"squads":{"squad_id":15}}';
 
 
 const everybodyURL = baseURL + endpointSquad;
-
+const StandardSite = "https://youtu.be/dQw4w9WgXcQ";
 
 getData(everybodyURL).then(allData =>{
     //console.log(allData)
@@ -24,17 +24,17 @@ getData(everybodyURL).then(allData =>{
    
    if(!personImg){
     //do nothing
-    personImg = "images/placeholder${afgerondGetalTussen1en5}.svg";
+    personImg = `images/placeholder${afgerondGetalTussen1en5}.svg`;
    }
   
    if (!personWebsite){
-
+personWebsite = StandardSite;
    }
 
         let personHTML = `<article>
   <h3>${personName}</h3>
       <img src="${personImg}" alt="${personName}">
-      <a href="https://krijnhoetmer.nl" aria-label="de website van ${personName}">website</a>
+      <a href="${personWebsite}" aria-label="de website van ${personName}">website</a>
       </article> `;
       everybodySection.insertAdjacentHTML('beforeend', personHTML);
     } )
